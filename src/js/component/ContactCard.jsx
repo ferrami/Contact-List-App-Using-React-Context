@@ -50,9 +50,6 @@ const ContactCard = ({ id, full_name, email, address, phone }) => {
 	const randomImg = `https://robohash.org/${full_name}`;
 
 	return (
-
-
-
 		<div className="card border-success w-75 mb-3">
 
 			{/* Modal para confirmar la eliminación del contacto */}
