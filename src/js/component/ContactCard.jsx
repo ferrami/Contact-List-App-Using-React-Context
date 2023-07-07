@@ -156,7 +156,6 @@ const ContactCard = ({ id, full_name, email, address, phone }) => {
 					</Link>
 				</div>
 			</div>
-
 		</div>
 	);
 };

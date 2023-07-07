@@ -19,6 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			// Get contact function
 			getContacts: async () => {
 				try {
 					const { currentAgendaSlug } = getStore();
@@ -29,6 +30,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.error("Error getting contacts:", error);
 				}
 			},
+
+			// Add contact function
 			addContact: async (newContact) => {
 				try {
 					const response = await fetch("https://assets.breatheco.de/apis/fake/contact/", {
@@ -46,6 +49,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.error("Error adding contact:", error);
 				}
 			},
+
+			// update contact function
 			updateContact: async (id, updatedContact) => {
 				try {
 					const response = await fetch(`https://assets.breatheco.de/apis/fake/contact/${id}`, {
@@ -69,6 +74,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.error("Error updating contact:", error);
 				}
 			},
+
+			// Delete contact function
 			deleteContact: async (id) => {
 				try {
 					const response = await fetch(`https://assets.breatheco.de/apis/fake/contact/${id}`, {

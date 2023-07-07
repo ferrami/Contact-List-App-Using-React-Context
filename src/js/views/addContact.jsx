@@ -20,15 +20,12 @@ export const AddContact = () => {
             alert("Details cannot be empty! :)");
             return;
         }
-
         const newContact = {
-
             "full_name": full_Name,
             "email": email,
             "agenda_slug": store.currentAgendaSlug,
             "address": address,
             "phone": phone,
-
         };
 
         console.log(newContact);
@@ -65,7 +62,6 @@ export const AddContact = () => {
                                 value={address} required
                             />
                         </div>
-
                         <Link to="/">
                             <button type="button" className="btn btn-success m-3" onClick={() => addContact()}>Save Contact</button>
                         </Link>
